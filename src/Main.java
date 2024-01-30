@@ -12,6 +12,17 @@ public class Main {
             System.out.printf("Enter %da number: ", i);
             positions[i] = sc.nextDouble();
         }
+        double highestValue = 0;
+        int highestPosition = 0;
+        for(int i = 0; i < quantity; i++){
+            if(highestValue < positions[i]){
+                highestValue = positions[i];
+                highestPosition = i;
+            }
+        }
+        System.out.println();
+        System.out.printf("Highest value: %.2f\n",highestValue);
+        System.out.printf("position highest value: %d", highestPosition);
         sc.close();
     }
 }
